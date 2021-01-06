@@ -1,0 +1,20 @@
+#w-sidebar{
+    width: 250px;
+    background: #354052;
+    color: #adb5bd;
+    transition: all 0.5s;
+    display: block;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.button-icon{
+    width: 20px;
+    border-radius: 15%;
+    display: flex;
+    float: right;
+    margin: 1px;
+
+}
+
