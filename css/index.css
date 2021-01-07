@@ -10,7 +10,8 @@ body {
     -moz-osx-font-smoothing: grayscale;
 
     }
-    #container-posts{
+    #w-container-post{
+        padding: 200px;
 
     }
 
