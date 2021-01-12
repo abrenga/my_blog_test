@@ -22,5 +22,5 @@
 
 img {
     border-radius: 100%;
-    height: 200px!important;
+    max-height: 200px;
 }
