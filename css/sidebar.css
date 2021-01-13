@@ -23,4 +23,9 @@
 img {
     border-radius: 100%;
     height: 200px!important;
+    position: absolute;
+    top: 120px;
+    
 }
+
+
