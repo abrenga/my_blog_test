@@ -7,44 +7,59 @@
     <title>Il mio Blog</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/index.css">
     <link rel="stylesheet" href="css/posts.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/topbar.css">
+
+
 </head>
 
 <body>
-    <div id="topBar">
-
-    </div>
-
-    <div class="container" id="w-sidebar">
-        <div class="row">
-            <div class="col-sm-4">
-                <div>
-                    <div id="name-blog">
-                        <div id="w-logo ">
-                            <img src="mio.jpg" class="img-fluid" alt="">
-                        </div>
-                        <span>
-                            <h3 class="sideBar-title">Antonietta Brenga</h3>
-                        </span>
-                    </div>
-
-                    <div id="w-keys">
-                        <a href="#" class="">Home</a>
-                        <a href="#" class="">Profilo</a>
-                        <a href="#" class="">Contatti</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-sm-8">
-                <div id="container-posts">
-                    
-                </div>
-
+    <nav class="navbar navbar-expand-md navbar-light navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">AweB</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">posts</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
             </div>
         </div>
+    </nav>
+
+
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col col-ms-4">
+                <img src="image/mio.jpg" alt="">
+
+            </div>
+            <div class="col col-ms-8">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iste nemo corrupti placeat accusantium totam
+                mollitia quaerat, est quam? Optio eligendi, natus tempora temporibus sapiente incidunt consequatur amet
+                reiciendis dolorem accusantium.
+            </div>
+
+        </div>
+
+
     </div>
 
 
@@ -93,8 +108,11 @@
         <p class="back_to_top"><a href="#">Back to top</a></p>
         <p class='copyright'>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
     </footer>
-
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/posts.js"></script>
 </body>
-<script src="posts.js"></script>
+
+
+
 
 </html>
