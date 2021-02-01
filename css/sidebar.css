@@ -1,29 +1,20 @@
 #w-sidebar{
-    width: 250px;
-    background: #3e475500;
-    color: #adb5bd;
-    transition: all 0.5s;
-    display: block;
-    position: absolute;
-    top: 0;
-    bottom: 0;
+   max-width: 1280px;
     
 }
 
-.button-icon{
-    width: 20px;
-    border-radius: 15%;
-    display: flex;
-    float: right;
-    margin: 1px;
-
-}
 
 
 img {
     border-radius: 100%;
-    max-height: 200px;
-
+    position: relative;
+    top: 25%;
 }
 
 
+.sideBar-title{
+    position: relative;
+    top: auto;
+    top: 65px;
+}
+   
