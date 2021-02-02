@@ -1,20 +1,24 @@
-#w-sidebar{
-   max-width: 1280px;
+.myJumbo{
+    background-color: transparent;
+}
+
+
+.mycontainer{
+    position: relative;
+    width: 1000px;
     
-}
+   }
 
 
+   .myImage{
+       margin: 30px;
+       position: relative;
+       border-radius: 100%;
+       max-width: 250px;
+       
+   }
 
-img {
-    border-radius: 100%;
-    position: relative;
-    top: 25%;
-}
-
-
-.sideBar-title{
-    position: relative;
-    top: auto;
-    top: 65px;
-}
+   .myText{
+       color: blanchedalmond;
+   }
    

@@ -1,5 +1,10 @@
 
 
-.right{
-   float: right;
+.myTopBar{
+   border-bottom: 2px solid #e6e6e665;
+   height: 3.2em;
+  background-color: transparent;
+   color:rgb(240, 240, 240);
+   font-size: 1.2em;
+
 }
