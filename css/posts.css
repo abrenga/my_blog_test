@@ -3,3 +3,18 @@
     height: 720px;
     margin-top: 2em;
 }
+
+
+@media (max-width: 768px){ 
+.container,  .container-sm {
+    max-width: 100%;
+    }
+}
+
+
+
+@media (max-width: 576px){
+.container, .container-sm {
+    max-width: 100% ;
+    }
+}
