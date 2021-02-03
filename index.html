@@ -12,14 +12,11 @@
     <link rel="stylesheet" href="css/posts.css">
     <link rel="stylesheet" href="css/sidebar.css">
     <link rel="stylesheet" href="css/topbar.css">
-
-
 </head>
 
 <body>
-<<<<<<< Updated upstream
-    <div class="container-fluid myBackround">
-        <nav class="navbar navbar-expand-lg navbar-light navbar-dark myTopBar">
+    <div class="myBackground">
+        <nav class="navbar navbar-expand-lg navbar-dark myTopBar">
             <div class="container-fluid">
                 <a class="navbar-brand" href="#">AweB</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
@@ -27,142 +24,64 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">posts</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
-                    </li>
-                </ul>
-            </div>
-    </div>
-    </nav>
-    </div>
-
-    <div class="jumbotron jumbotron-fluid myJumbo">
-        <div class="container mycontainer">
-            <div class="row align-items-center">
-                <div class="col col-ms-3">
-                    <img class="img-fluid myImage mx-auto d-block" src="image/mio.jpg" alt="">
-
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">Contact</a>
+                        </li>
+                    </ul>
                 </div>
-                <div class="col col-ms-9 myText">
-                    " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    Ipsum dolores totam sit in eum laborum. Cumque aperiam mollitia
-                    Nella vita la cosa importante è non mollare... "
-
-                </div>
-
-
             </div>
-        </div>
-
-=======
- 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="#">Navbar</a>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-              <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="#">Home</a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="#">Link</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Dropdown
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><hr class="dropdown-divider"></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
-              </li>
-            </ul>
-            <form class="d-flex">
-              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-              <button class="btn btn-outline-success" type="submit">Search</button>
-            </form>
-          </div>
-        </div>
-      </nav>
->>>>>>> Stashed changes
-
-
-
-
-
-
-        <!--<section id="w-container-post container">
-
-
-
-        article.blog-post{
-    background-color:#fff;
-    padding: 100px 121px;
-    border: 1px solid rgba(0,0,0,0.1);
-    
-}
-        <div class="row">
-            <div id="w-sidebar" class="col-sm-4">
-                <input type="submit" class="button-icon" value="">
-                <div id="name-blog">
-                    <div id="w-logo ">
-                        <img src="mio.jpg" class="img-fluid" alt="">
+        </nav>
+        <div class="jumbotron jumbotron-fluid myJumbo">
+            <div class="container mycontainer">
+                <div class="row align-items-center">
+                    <div class="col col-ms-3">
+                        <img class="img-fluid myImage mx-auto d-block" src="image/mio.jpg" alt="">
                     </div>
-                    <span>
-                        <h3>Antonietta Brenga</h3>
-                    </span>
-                </div>
+                    <div class="col col-ms-9 myText">
+                        " Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                        Ipsum dolores totam sit in eum laborum. Cumque aperiam mollitia
+                        Nella vita la cosa importante è non mollare... "
 
-                <div id="w-keys">
-                    <a href="#" class="">Home</a>
-                    <a href="#" class="">Profilo</a>
-                    <a href="#" class="">Contatti</a>
+                    </div>
                 </div>
-            </div>
-            <div id="scrivi-posts"
-                class="col-md-8">
-                <input type="submit" class="button" value="invia">
-            </div>
-            <div id="container-posts">
-                <article class="blog-post">
-                    <h3 class="title">Titolo</h3>
-                    <div class="body">corpo</div>
-                </article>
             </div>
         </div>
-    </section>-->
-        <footer class="w-container-footer">
-            <p class="back_to_top"><a href="#">Back to top</a></p>
-            <p class='copyright'>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
-        </footer>
-        <script src="js/bootstrap.min.js"></script>
-        <script src="js/posts.js"></script>
+    </div>
+    <div class="container-fluid myPostsColor">
+        <div class="row align-items-center ">
+            <div class="col col-md-5 col-ms-12">
+                <div class="col col-md-12">
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <footer class="w-container-footer">
+        <p class="back_to_top"><a href="#">Back to top</a></p>
+        <p class='copyright'>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/posts.js"></script>
 </body>
-<<<<<<< Updated upstream
 
 
 
-=======
-<script src="js/posts.js"></script>
-<script src="js/bootstrap.min.js"></script>
->>>>>>> Stashed changes
 
 </html>

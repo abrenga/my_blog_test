@@ -1,5 +1,5 @@
 body {
-    background-color: #464646;
+    background-color: rgb(223, 219, 219);
     margin: auto;
     width: 100%;
     height: 100%;
@@ -27,8 +27,11 @@ body {
     }
 
 
-    .myBackround{
-       background-image:url(image/)
+    .myBackground{
+        background-color: rgb(69, 8, 126);
+        background-repeat: no-repeat, repeat;
+        background-size: cover;
+        position: center;
     }
 
 
