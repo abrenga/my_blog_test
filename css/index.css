@@ -18,6 +18,12 @@ body {
    }
 
 
+   .point:hover{
+        fill: rgb(121, 51, 185);
+        
+   }
+
+
 
     .w-container-footer {
         display: flex;
