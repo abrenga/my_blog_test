@@ -22,3 +22,12 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
   }
 
 }
+
+
+.my-style-image{
+
+width: 500px;
+height: auto;
+
+
+}

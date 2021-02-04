@@ -8,6 +8,11 @@ body {
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
     
+    }
+    .myrow{
+       display: flex ;
+       margin-top: 150px;
+       align-items: center;
 
     }
 
