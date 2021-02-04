@@ -32,7 +32,7 @@ var blog = {
 
 
 async function initPosts() {
-    let response = await fetch('posts.json');
+    let response = await fetch('js/posts.json');
     let posts = await response.json();
     blog.posts = posts;
     blog.showPosts();
