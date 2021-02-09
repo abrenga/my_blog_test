@@ -42,9 +42,9 @@ initPosts();
 
 
 $(document).ready(function(){
-$(".stretched-link").click(function(){
+$(".link").click(function(){
     $(".displayno").slideToggle(1000,"swing");
 $(this).find($("p")).removeClass(".displayno");
-$(this).find($(".stretched-link").removetext("").addtext("leggi di meno"));
+$(this).find($(".link").removetext("").addtext("leggi di meno"));
 })
 });

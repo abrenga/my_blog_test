@@ -23,11 +23,12 @@ body {
    }
 
    
+  .point:hover{
+      fill: rgb(185, 180, 180);
+  }
 
-   .point:hover{
-        fill:#bebebe;
-        
-   }
+   
+
 
    .displayno{
     display: none;
