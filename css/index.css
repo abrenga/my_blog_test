@@ -22,9 +22,10 @@ body {
        margin-top: 130px;
    }
 
+   
 
    .point:hover{
-        fill: rgb(121, 51, 185);
+        fill:#bebebe;
         
    }
 
@@ -50,7 +51,7 @@ body {
 
 
     .myBackground{
-        background-color: rgb(69, 8, 126);
+        background-color: #655e6b;
         background-repeat: no-repeat, repeat;
         background-size: cover;
         position: center;

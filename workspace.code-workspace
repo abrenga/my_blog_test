@@ -15,5 +15,8 @@
 		{
 			"path": "image"
 		}
-	]
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "node_modules"
+	}
 }
