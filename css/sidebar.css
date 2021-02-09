@@ -1,15 +1,8 @@
-.myJumbo{
-    background-image: url("../image/pexels-thisisengineering-3861951.jpg");
-    background-size: cover;
-    
-    
-}
-
 
 .mycontainer{
     position: relative;
     width: 1270px;
-    height: 720px;
+    height: 500px;
     
    }
 

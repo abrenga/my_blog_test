@@ -52,10 +52,9 @@ body {
 
 
     .myBackground{
-        background-color: #655e6b;
-        background-repeat: no-repeat, repeat;
+        background-image: url("../image/cover.jpg");
         background-size: cover;
-        position: center;
+        background-position: center;
     }
 
 
