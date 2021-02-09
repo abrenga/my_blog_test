@@ -39,3 +39,11 @@ async function initPosts() {
 }
 
 initPosts();
+
+
+$(document).ready(function(){
+$(".stretched-link").click(function(){
+    $(".displayno").slideToggle(1000,"swing");
+$(this).find($("p")).removeClass(".displayno");
+})
+});
