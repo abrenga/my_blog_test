@@ -41,15 +41,30 @@ async function initPosts() {
 initPosts();
 
 
+var isClosed = true;
+var howManyClicks = 0;
 
+$(document).ready(function() {
+    $(".link").click(
+        function() {
+            $(".displayno").slideToggle(1000, "swing",
+                function() {
+                    isClosed =!isClosed;
+                    howManyClicks++;
+                    
+                    if(isClosed){
+                        $(".link").text("leggi di più");
+                    }else{
+                        $(".link").text("leggi di meno");
+                    }
 
-$(document).ready(function(){
-$(".link").click(function(){
-   $(".displayno").slideToggle(1000,function(){
-       $(".link").text("leggi meno");}),function(){
-    $(".link").replaceWith("leggi +");
-   }
-    
+                    if(howManyClicks>=3){
+                        $(".link").text("TADDI SOGGIONN A LOC")
+                    }
 
- });
+                    
+                }
+            )
+        }
+    );
 });
