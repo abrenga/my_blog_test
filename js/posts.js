@@ -41,10 +41,16 @@ async function initPosts() {
 initPosts();
 
 
+
+
 $(document).ready(function(){
 $(".link").click(function(){
-    $(".displayno").slideToggle(1000,"swing");
-$(this).find($("p")).removeClass(".displayno");
-$(this).find($(".link").removetext("").addtext("leggi di meno"));
-})
+   if($(".displayno").slideDown(1000,"swing")){ 
+    $(".link").replaceWith("leggi meno");
+}if($(".displayno").slideUp(1000,"swing")){
+    $(".link").replaceWith("leggi +");
+}
+    
+    
+ })
 });
