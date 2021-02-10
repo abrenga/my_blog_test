@@ -45,12 +45,11 @@ initPosts();
 
 $(document).ready(function(){
 $(".link").click(function(){
-   if($(".displayno").slideDown(1000,"swing")){ 
-    $(".link").replaceWith("leggi meno");
-}if($(".displayno").slideUp(1000,"swing")){
+   $(".displayno").slideToggle(1000,function(){
+       $(".link").text("leggi meno");}),function(){
     $(".link").replaceWith("leggi +");
-}
+   }
     
-    
- })
+
+ });
 });
