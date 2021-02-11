@@ -58,4 +58,24 @@ body {
     }
 
 
+    @media  (max-width:991px){
+       
+        .nav-item{
+            background-color: rgba(17, 16, 16, 0.151);
+            color: black;
+            text-align: center;
+            border-bottom: 1 solid white;
+        
+          }
+
+          .myTopBar{
+            background-color: black!important;
+        
+          }
+
+          #contact{
+              display: inline;
+          }
+    }
+
     

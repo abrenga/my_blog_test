@@ -42,7 +42,7 @@ initPosts();
 
 
 var isClosed = true;
-var howManyClicks = 0;
+
 
 $(document).ready(function() {
     $(".link").click(
@@ -50,16 +50,11 @@ $(document).ready(function() {
             $(".displayno").slideToggle(1000, "swing",
                 function() {
                     isClosed =!isClosed;
-                    howManyClicks++;
                     
                     if(isClosed){
                         $(".link").text("leggi di più");
                     }else{
                         $(".link").text("leggi di meno");
-                    }
-
-                    if(howManyClicks>=3){
-                        $(".link").text("TADDI SOGGIONN A LOC")
                     }
 
                     
