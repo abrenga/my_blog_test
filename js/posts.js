@@ -12,10 +12,10 @@ var blog = {
 
     createPostHTML: function (post) {
         let post_Dom = document.createElement('div');
-        post_Dom.setAttribute('class','row')
-        post_Dom.setAttribute('class','featurette')
-        let article_Dom = document.createElement('article');
+        post_Dom.setAttribute('class','row featurette-divider')
+        let article_Dom = document.createElement('div');
         article_Dom.setAttribute('class', 'blog-post');
+        
         article_Dom.setAttribute('id', post.id);
 
         let title = document.createElement('h3');
@@ -23,8 +23,8 @@ var blog = {
         title.innerHTML = post.title;
         article_Dom.appendChild(title);
         
-        let contentBody = document.createElement('div');
-        contentBody.setAttribute('class','body');
+        let contentBody = document.createElement('p');
+        contentBody.setAttribute('class','col-md-7');
         contentBody.innerHTML = post.content;
         article_Dom.appendChild(contentBody);
         post_Dom.appendChild(article_Dom);
