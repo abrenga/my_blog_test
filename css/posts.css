@@ -1,3 +1,9 @@
+.myBackgroundPosts{
+  background-image: url("../image/new-min.jpg");
+  background-size: cover;
+  background-position: bottom;
+}
+
 .myPostsColor{
     background-color: rgb(248, 244, 247);
     margin-top: 2em;

@@ -11,19 +11,24 @@ var blog = {
     },
 
     createPostHTML: function (post) {
-        let post_Dom = document.createElement('article');
-        post_Dom.setAttribute('class', 'blog-post');
-        post_Dom.setAttribute('id', post.id);
+        let post_Dom = document.createElement('div');
+        post_Dom.setAttribute('class','row')
+        post_Dom.setAttribute('class','featurette')
+        let article_Dom = document.createElement('article');
+        article_Dom.setAttribute('class', 'blog-post');
+        article_Dom.setAttribute('id', post.id);
 
         let title = document.createElement('h3');
         title.setAttribute('class', 'title');
         title.innerHTML = post.title;
-        post_Dom.appendChild(title);
+        article_Dom.appendChild(title);
         
         let contentBody = document.createElement('div');
         contentBody.setAttribute('class','body');
         contentBody.innerHTML = post.content;
-        post_Dom.appendChild(contentBody);        
+        article_Dom.appendChild(contentBody);
+        post_Dom.appendChild(article_Dom);
+
 
         this.postsContainer.appendChild(post_Dom);
     },
