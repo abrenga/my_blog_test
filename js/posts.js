@@ -1,7 +1,7 @@
 var blog = {
     currentPage: 0,
     postsContainer: document.getElementById('container-posts'),
-    posts: null,
+    
     showPosts: function () {
         /*Per mostrare i posts devo iterare sull'array */
         this.posts.forEach(post => {
