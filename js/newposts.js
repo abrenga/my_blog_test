@@ -9,14 +9,16 @@ var blog = {
 
         let image = document.createElement("img");
         image.setAttribute("class", "card-img-top");
-        image.innerHTML = post.image;
+        image.setAttribute("src",post.image);
+        cardDom.appendChild(image);
+        
 
 
-        cardDom.appendChild(createCardPosts(id, posts, content));
+        cardDom.appendChild(this.createCardPosts(post));
         this.containerCard.appendChild(cardDom);
     },
 
-    createCardPosts: function (id, posts, content) {
+    createCardPosts: function (post) {
 
         let postDom = document.createElement("div");
         postDom.setAttribute("class","card-body");
@@ -34,7 +36,9 @@ var blog = {
 
         let buttom =  document.createElement("a");
         buttom.setAttribute('class', 'btn btn-primary');
+        buttom.innerHTML="leggi i più"
         postDom.appendChild(buttom);
+        return postDom;
     },
 
 
