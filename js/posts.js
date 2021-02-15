@@ -12,7 +12,7 @@ var blog = {
 
     createPostHTML: function (post) {
         let post_Dom = document.createElement('div');
-        post_Dom.setAttribute('class','row featurette-divider')
+        post_Dom.setAttribute('class','row featurette-divider myrow');
         let article_Dom = document.createElement('div');
         article_Dom.setAttribute('class', 'blog-post');
         
@@ -24,7 +24,7 @@ var blog = {
         article_Dom.appendChild(title);
         
         let contentBody = document.createElement('p');
-        contentBody.setAttribute('class','col-md-7');
+        contentBody.setAttribute('class','col-md-10');
         contentBody.innerHTML = post.content;
         article_Dom.appendChild(contentBody);
         post_Dom.appendChild(article_Dom);
