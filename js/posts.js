@@ -43,7 +43,7 @@ async function initPosts() {
     blog.showPosts();
 }
 
-initPosts();
+
 
 
 var isClosed = true;
