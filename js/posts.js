@@ -12,9 +12,9 @@ var blog = {
 
     createPostHTML: function (post) {
         let post_Dom = document.createElement('div');
-        post_Dom.setAttribute('class','row featurette-divider myrow');
+        post_Dom.setAttribute('class','col');
         let article_Dom = document.createElement('div');
-        article_Dom.setAttribute('class', 'blog-post');
+        article_Dom.setAttribute('class', 'card blog-post');
         
         article_Dom.setAttribute('id', post.id);
 
@@ -68,3 +68,18 @@ $(document).ready(function() {
         }
     );
 });
+
+async function getPostsIndex() {
+    let response = await fetch('posts/index.json');
+    let posts = await response.json();
+
+    return posts;
+}
+
+async function getPost(slug) {
+    let response = await fetch('posts/' + slug + '/post.json');
+    let post = await response.json();
+    post.image = "posts/" + slug + "/" + post.image;
+
+    return post;
+}

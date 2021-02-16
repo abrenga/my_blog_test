@@ -3,9 +3,14 @@ var blog = {
     containerCard: document.getElementById("container-posts"),
 
     createCard: function (post) {
-
+        let cardWrapper = document.createElement("div");
+        cardWrapper.setAttribute("class","col");
+        
         let cardDom = document.createElement("div");
         cardDom.setAttribute("class", "card Card-style");
+        cardWrapper.appendChild(cardDom);
+
+
 
         let image = document.createElement("img");
         image.setAttribute("class", "card-img-top");
@@ -15,7 +20,7 @@ var blog = {
 
 
         cardDom.appendChild(this.createCardPosts(post));
-        this.containerCard.appendChild(cardDom);
+        this.containerCard.appendChild(cardWrapper);
     },
 
     createCardPosts: function (post) {
