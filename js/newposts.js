@@ -31,7 +31,7 @@ var blog = {
         
         let paragraphPosts =  document.createElement("p");
         paragraphPosts.setAttribute('class', 'card-text');
-        paragraphPosts.innerHTML = post.content;
+        paragraphPosts.innerHTML =this.extractPostBodyPreview(post);
         postDom.appendChild(paragraphPosts);
 
         let buttom =  document.createElement("a");
@@ -48,6 +48,13 @@ var blog = {
             this.createCard(post);
             
         });
+    },
+
+    extractPostBodyPreview: function(post){
+        let str = post.content;
+        let newStr = str.substring(0,150);
+        return newStr+ "...";
+        
     }
 
 
