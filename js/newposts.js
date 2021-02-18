@@ -47,9 +47,9 @@ var blog = {
     },
 
 
-    showPosts: function(){
+    showPosts: function(post){
 
-        this.post.forEach(post => {
+        this.posts.forEach(post => {
             this.createCard(post);
             
         });
@@ -63,17 +63,30 @@ var blog = {
     }
 
 
-
 }
 
 
-async function initPosts() {
-    let response = await fetch('js/posts.json');
+async function getPostsIndex() {
+    let response = await fetch('posts/index.json');
     let posts = await response.json();
-    blog.post = posts;
-    blog.showPosts();
-};
+    posts.forEach(post=>{
+        getPost(post);
+    })
+    
+    
+    
+}
+
+async function getPost(slug) {
+    let response = await fetch('posts/' + slug + '/post.json');
+    let post = await response.json();
+        blog.createCard(post);
 
 
 
-initPosts();
+    
+}
+
+
+getPost("my-first-post");
+
