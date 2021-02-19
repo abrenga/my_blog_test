@@ -80,6 +80,5 @@ async function getPost(slug) {
     let response = await fetch('posts/' + slug + '/post.json');
     let post = await response.json();
     post.image = "posts/" + slug + "/" + post.image;
-
-    return post;
+    
 }
