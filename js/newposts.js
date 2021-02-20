@@ -47,12 +47,13 @@ var blog = {
     },
 
 
-    showPosts: function(post){
+    prendiPosts: function(posts){
 
-        this.posts.forEach(post => {
+        posts.forEach(post=>{
+            getPost(post);
             this.createCard(post);
-            
         });
+            
     },
 
     extractPostBodyPreview: function(post){
@@ -69,11 +70,8 @@ var blog = {
 async function getPostsIndex() {
     let response = await fetch('posts/index.json');
     let posts = await response.json();
-    posts.forEach(post=>{
-        getPost(post);
-    })
-    
-    
+    return posts;
+   
     
 }
 
@@ -81,11 +79,12 @@ async function getPost(slug) {
     let response = await fetch('posts/' + slug + '/post.json');
     let post = await response.json();
     post.image = "posts/" + slug + "/" + post.image;
-        blog.createCard(post);
-
     
 }
 
 
-getPost("my-first-post");
+
+
+
+
 
