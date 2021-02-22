@@ -41,11 +41,16 @@ var blog = {
 
         let buttom = document.createElement("a");
         buttom.setAttribute('class', 'btn btn-primary');
+        buttom.setAttribute('href', 'singolPost.html?id=' + post.id);
         buttom.innerHTML = "leggi i più"
         postDom.appendChild(buttom);
         return postDom;
     },
 
+    createSinglePost: function (post) {
+
+
+    },
 
     prendiPosts: function (posts) {
 
@@ -62,10 +67,10 @@ var blog = {
         return newStr + "...";
     },
 
-     getPostsIndex: async function () {
+    getPostsIndex: async function () {
         let response = await fetch('posts/index.json');
         let posts = await response.json();
-    
+
         return posts;
     },
 
@@ -73,7 +78,7 @@ var blog = {
         let response = await fetch('posts/' + slug + '/post.json');
         let post = await response.json();
         post.image = "posts/" + slug + "/" + post.image;
-    
+
         return post;
     },
 
@@ -81,35 +86,45 @@ var blog = {
         let response = await fetch('posts/' + slug + '/post.json');
         let post = await response.json();
         post.image = "posts/" + slug + "/" + post.image;
-    
+
         return post;
     },
 
     getLatestPosts: async function (slugs) {
         let promises = [];
-    
+
         slugs.forEach((slug) => {
             const promise = this.getPost(slug);
             promises.push(promise);
         });
-    
+
         return await Promise.all(promises);
     },
-    
+
     init: async function () {
         const postsIndex = await this.getPostsIndex();
-    
+
         const selectedSlugs = postsIndex.slice(-4);
         const posts = await this.getLatestPosts(selectedSlugs);
-    
+
         posts.forEach((post) => this.createCard(post));
+    },
+
+    initSinglePost : async function () {
+        let postId = this.getPostIdParameter();
+        let post = await this.getPost(postId);
+        console.log(post);
+    },
+
+    getPostIdParameter : function () {
+        let postId = window.location.search.substr(4);
+        return postId;
     }
-
-
 
 }
 
-blog.init().then();
+
+
 
 
 
