@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Il mio Blog</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/posts.css">
+    <link rel="stylesheet" href="css/sidebar.css">
+    <link rel="stylesheet" href="css/topbar.css">
+    <script src="js/jquery-3.5.1.min.js"></script>
+</head>
+
+<body>
+    <div class="myBackground">
+        <nav class="navbar navbar-expand-lg navbar-dark myTopBar">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">AweB</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav mb-2 mb-lg-0 ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#posts">Posts</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">Contact</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="jumbotron jumbotron-fluid myJumbo">
+            <div class="container mycontainer">
+                <div class="row align-items-center">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class=" container-sm myPostsColor">
+        <div class="row myrow">
+            <img class="rounded float-start  my-style-image" src="image/new-min.jpg" alt="">
+            <div class="col-md-6">
+                <div id="container-posts">
+
+                </div>
+            </div>
+        </div>
+        
+        </div>-->
+
+    <div class="container marketing">
+
+        <!-- Three columns of text below the carousel -->
+        <div class="row myrow">
+            <div class="col-lg-4 mycol">
+                <a class="btn btn" href="#about" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#655e6b"
+                        class="bi bi-person-fill point" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z" />
+                    </svg></a>
+
+                <h2>About</h2>
+                <p>Se ti interessa sapere un po' di piu' su di me e su come sono arrivata ad appassionarmi a questo
+                    mestiere,
+                    ti consiglio di leggere la mia breve biografia, qui in basso.
+                </p>
+            </div><!-- /.col-lg-4 -->
+            <div id="posts" class="col-lg-4 mycol">
+                <a class="btn btn " href="#" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#655e6b"
+                        class="bi bi-pencil-square point " viewBox="0 0 16 16">
+                        <path
+                            d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456l-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z" />
+                        <path fill-rule="evenodd"
+                            d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z" />
+                    </svg></a>
+                <h2>posts</h2>
+                <p>Leggi i miei posts, contengono tutte le nozioni che ho imparato lavorando nel web,
+                    spero potranno esere utili</p>
+
+            </div><!-- /.col-lg-4 -->
+            <div class="col-lg-4 mycol">
+                <a class="btn btn" href="#contact" role="button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" fill="#655e6b"
+                        class="bi bi-telephone-fill point" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd"
+                            d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                    </svg>
+                </a>
+
+                <h2>Contact</h2>
+                <p>Se hai bisogno di un sito web puoi affidarti a me, <br>
+                    contattami pure ad uno dei seguenti indirizzi</p>
+            </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+
+        <hr class="featurette divider myh3">
+        <div class="row featurette">
+
+            <div id="about" class="col-md-7">
+                <h2 class="featurette-heading">About me <span class="text-muted">Pillole di vita.
+                    </span></h2>
+                <p class="lead">Prima di tutto voglio specificare che ho creato questo blog principalmente per
+                    Imparare.<br>
+                    Esatto! Hai letto bene, per imparare!<br>
+                    Il mio mondo infatti è stato sempre lontano dalla tecnologia e dal web, e mai avrei potuto pensare
+                    di appassionarmi ad un tale mondo.<br>
+                    Ho conseguito il diploma nel ormai lontano 2009 al liceo scientifico di una piccola città nella
+                    provincia di Salerno, dopo il diploma mi trasferì a Siena per frequentare l'universita<br>
+                    La mia situazione economica di certo non era delle più floride, e per mantenere sia il lavoro che lo
+                    studio ho arrancato nel seguire i corsi e sopratto nel dare esami.<br>
+                    La decisione di abbandonare fù una vera e propria sconfitta per me, una sconfitta necessaria
+                    aimè<br>
+                    Per i 5 anni successivi, tornata a casa, ho lavoro presso un call center che mi ha visto crescere
+                    professionalmente e socialmente.<br>
+
+
+                <p class="displayno">
+                    Beh ma la vera svolta è stata nel 2018, quando dopo aver perso il lavoro, sentivo di volere qualcosa
+                    di più dalla mia vita, cosi, grazie al mio compagno, ho deciso di iniziare a studiare nuovamente per
+                    diventare web desiner.<br>
+                    Ed ora eccomi qui, che cerco di imparare il più possibile e nonostante l'enorme fatica nel
+                    rimettermi alla prova dopo anni lontana dagli studi,in me c'è la profonda voglia di imparare e di
+                    fare di questa nuova professione la MIA professione.
+                    In definitiva, cosa mi aspetto da me stessa?<br>
+                    Mi aspetto di accrescere la mia conoscenza, e ovviamente di fare un sacco di soldi, perche' istruita
+                    si, ma povera, col cazzo!</p>
+
+                <a class="link">leggi di più</a>
+
+            </div>
+            <div class="col-md-5">
+                <div>
+                    <img src="image/mio.jpg" alt="" width="70%" height="70%">
+
+                </div>
+
+
+            </div>
+        </div>
+        <hr class="featurette divider myh3">
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md 8">
+
+                <div id="contact" class="d-grid gap-5 d-md-flex justify-content-md-center">
+                    <a href="mailto:antobrg90@hotmail.it"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="blue"
+                            class="bi bi-envelope" viewBox="0 0 16 16">
+                            <path
+                                d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2zm13 2.383l-4.758 2.855L15 11.114v-5.73zm-.034 6.878L9.271 8.82 8 9.583 6.728 8.82l-5.694 3.44A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.739zM1 11.114l4.758-2.876L1 5.383v5.73z" />
+                        </svg></a>
+                    <a href="https://www.facebook.com/antonietta.brenga.5/"><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor"
+                            class="bi bi-facebook" viewBox="0 0 16 16">
+                            <path
+                                d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z" />
+                        </svg>
+                    </a>
+                    <a href="https://www.instagram.com/antobrg/">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="violet
+                        " class="bi bi-instagram" viewBox="0 0 16 16">
+                            <path
+                                d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z" />
+                        </svg>
+                    </a>
+
+                </div>
+
+
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    </div>
+
+    </div>
+
+
+    <!-- <footer class="w-container-footer">
+        <p class="back_to_top"><a href="#">Back to top</a></p>
+        <p class='copyright'>© 2017-2019 Company, Inc. · <a href="#">Privacy</a> · <a href="#">Terms</a></p>
+    </footer>-->
+
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/posts.js"></script>
+
+</body>
+
+
+
+
+</html>

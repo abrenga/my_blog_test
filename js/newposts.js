@@ -60,43 +60,61 @@ var blog = {
         let str = post.content;
         let newStr = str.substring(0, 150);
         return newStr + "...";
+    },
+
+     getPostsIndex: async function () {
+        let response = await fetch('posts/index.json');
+        let posts = await response.json();
+    
+        return posts;
+    },
+
+    getPost: async function (slug) {
+        let response = await fetch('posts/' + slug + '/post.json');
+        let post = await response.json();
+        post.image = "posts/" + slug + "/" + post.image;
+    
+        return post;
+    },
+
+    getPost: async function (slug) {
+        let response = await fetch('posts/' + slug + '/post.json');
+        let post = await response.json();
+        post.image = "posts/" + slug + "/" + post.image;
+    
+        return post;
+    },
+
+    getLatestPosts: async function (slugs) {
+        let promises = [];
+    
+        slugs.forEach((slug) => {
+            const promise = this.getPost(slug);
+            promises.push(promise);
+        });
+    
+        return await Promise.all(promises);
+    },
+    
+    init: async function () {
+        const postsIndex = await this.getPostsIndex();
+    
+        const selectedSlugs = postsIndex.slice(-4);
+        const posts = await this.getLatestPosts(selectedSlugs);
+    
+        posts.forEach((post) => this.createCard(post));
     }
+
+
+
 }
 
+blog.init().then();
 
-async function getPostsIndex() {
-    let response = await fetch('posts/index.json');
-    let posts = await response.json();
 
-    return posts;
-}
 
-async function getPost(slug) {
-    let response = await fetch('posts/' + slug + '/post.json');
-    let post = await response.json();
-    post.image = "posts/" + slug + "/" + post.image;
 
-    return post;
-}
 
-async function getLatestPosts(slugs) {
-    let promises = [];
 
-    slugs.forEach((slug) => {
-        const promise = getPost(slug);
-        promises.push(promise);
-    });
 
-    return await Promise.all(promises);
-}
 
-async function init() {
-    const postsIndex = await getPostsIndex();
-
-    const selectedSlugs = postsIndex.slice(-3);
-    const posts = await getLatestPosts(selectedSlugs);
-
-    posts.forEach((post) => blog.createCard(post));
-}
-
-init().then();

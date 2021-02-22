@@ -14,6 +14,9 @@
 		},
 		{
 			"path": "image"
+		},
+		{
+			"path": "posts"
 		}
 	],
 	"settings": {
