@@ -12,9 +12,9 @@ var blog = {
 
 
 
-        let image = document.createElement("img");
-        image.setAttribute("class", "card-img-top");
+        let image = document.createElement("img"); 
         image.setAttribute("src", post.image);
+        image.setAttribute('class', 'btn btn-primary');
         cardDom.appendChild(image);
 
 
@@ -49,8 +49,20 @@ var blog = {
 
     createSinglePost: function (post) {
 
+        let postImage = document.createElement("div");
+        postImage.setAttribute("class","col-md-8 myjumboT");
+        let imgE =document.createElement("img");
+        imgE.setAttribute("src", post.image);
+        postImage.appendChild(imgE);
+        this.containerCard.appendChild(postImage);
+        return postImage;
+
+
 
     },
+
+
+
 
     prendiPosts: function (posts) {
 
@@ -74,13 +86,6 @@ var blog = {
         return posts;
     },
 
-    getPost: async function (slug) {
-        let response = await fetch('posts/' + slug + '/post.json');
-        let post = await response.json();
-        post.image = "posts/" + slug + "/" + post.image;
-
-        return post;
-    },
 
     getPost: async function (slug) {
         let response = await fetch('posts/' + slug + '/post.json');
@@ -113,13 +118,15 @@ var blog = {
     initSinglePost : async function () {
         let postId = this.getPostIdParameter();
         let post = await this.getPost(postId);
-        console.log(post);
+        this.createSinglePost(post);
     },
 
     getPostIdParameter : function () {
         let postId = window.location.search.substr(4);
         return postId;
-    }
+    },
+
+  
 
 }
 
