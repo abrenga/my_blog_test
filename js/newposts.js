@@ -51,6 +51,7 @@ var blog = {
 
         let imgE =document.createElement("img");
         imgE.setAttribute("src", post.image);
+        imgE.setAttribute("height","500px")
 
         let postContainer = document.createElement("div");
         postContainer.setAttribute("class","card-body");
@@ -64,12 +65,12 @@ var blog = {
 
         let postText = document.createElement("p");
         postText.setAttribute("class", "card-text");
-        postTitle.innerHTML= post.content;
+        postText.innerHTML= post.content;
         postContainer.appendChild(postText);
 
-
-        this.containerCard.appendChild(postContainer);
         this.containerCard.appendChild(imgE);
+        this.containerCard.appendChild(postContainer);
+        
 
 
        
