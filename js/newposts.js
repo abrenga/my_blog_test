@@ -49,15 +49,32 @@ var blog = {
 
     createSinglePost: function (post) {
 
-        let postImage = document.createElement("div");
-        postImage.setAttribute("class","col-md-8 myjumboT");
         let imgE =document.createElement("img");
         imgE.setAttribute("src", post.image);
-        postImage.appendChild(imgE);
-        this.containerCard.appendChild(postImage);
-        return postImage;
+
+        let postContainer = document.createElement("div");
+        postContainer.setAttribute("class","card-body");
 
 
+        let postTitle = document.createElement("h5");
+        postTitle.setAttribute("class","card-title");
+        postTitle.innerHTML= post.title;
+        postContainer.appendChild(postTitle);
+
+
+        let postText = document.createElement("p");
+        postText.setAttribute("class", "card-text");
+        postTitle.innerHTML= post.content;
+        postContainer.appendChild(postText);
+
+
+        this.containerCard.appendChild(postContainer);
+        this.containerCard.appendChild(imgE);
+
+
+       
+
+        return postContainer,imgE;
 
     },
 
