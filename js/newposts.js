@@ -12,7 +12,7 @@ var blog = {
 
 
 
-        let image = document.createElement("img"); 
+        let image = document.createElement("img");
         image.setAttribute("src", post.image);
         image.setAttribute('class', 'btn btn-primary');
         cardDom.appendChild(image);
@@ -49,33 +49,39 @@ var blog = {
 
     createSinglePost: function (post) {
 
-        let imgE =document.createElement("img");
+        let imgE = document.createElement("img");
         imgE.setAttribute("src", post.image);
-        imgE.setAttribute("height","500px")
+        imgE.setAttribute("height", "500px")
 
         let postContainer = document.createElement("div");
-        postContainer.setAttribute("class","card-body");
+        postContainer.setAttribute("class", "card-body");
 
 
         let postTitle = document.createElement("h1");
-        postTitle.setAttribute("class","card-title");
-        postTitle.innerHTML= post.title;
+        postTitle.setAttribute("class", " my-title card-title");
+        postTitle.innerHTML = post.title;
         postContainer.appendChild(postTitle);
+
+        let hrSeparator = document.createElement("hr");
+        hrSeparator.setAttribute("class", "featurette divider myh3");
+        postContainer.appendChild(hrSeparator);
+
 
 
         let postText = document.createElement("p");
-        postText.setAttribute("class", "card-text");
-        postText.innerHTML= post.content;
+        postText.setAttribute("class", " lead my-content card-text");
+        postText.innerHTML = post.content;
         postContainer.appendChild(postText);
 
         this.containerCard.appendChild(imgE);
         this.containerCard.appendChild(postContainer);
-        
 
 
-       
 
-        return postContainer,imgE;
+
+
+
+        return postContainer, imgE;
 
     },
 
@@ -133,18 +139,18 @@ var blog = {
         posts.forEach((post) => this.createCard(post));
     },
 
-    initSinglePost : async function () {
+    initSinglePost: async function () {
         let postId = this.getPostIdParameter();
         let post = await this.getPost(postId);
         this.createSinglePost(post);
     },
 
-    getPostIdParameter : function () {
+    getPostIdParameter: function () {
         let postId = window.location.search.substr(4);
         return postId;
     },
 
-  
+
 
 }
 
