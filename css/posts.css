@@ -2,6 +2,7 @@
   background-image: url("../image/new-min.jpg");
   background-size: cover;
   background-position: bottom;
+  height: 500px;
 }
 
 .myBlogPosts{

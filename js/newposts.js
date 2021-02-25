@@ -57,7 +57,7 @@ var blog = {
         postContainer.setAttribute("class","card-body");
 
 
-        let postTitle = document.createElement("h5");
+        let postTitle = document.createElement("h1");
         postTitle.setAttribute("class","card-title");
         postTitle.innerHTML= post.title;
         postContainer.appendChild(postTitle);
