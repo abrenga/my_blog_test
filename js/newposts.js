@@ -58,9 +58,14 @@ var blog = {
 
 
         let postTitle = document.createElement("h1");
-        postTitle.setAttribute("class", " my-title card-title");
+        postTitle.setAttribute("class", "my-title card-title");
         postTitle.innerHTML = post.title;
         postContainer.appendChild(postTitle);
+
+        let postNews=  document.createElement("p");
+        postNews.setAttribute("class", "text-muted");
+        postNews.innerHTML= segnaData();
+        postContainer.appendChild(postNews);
 
         let hrSeparator = document.createElement("hr");
         hrSeparator.setAttribute("class", "featurette divider myh3");
@@ -73,11 +78,11 @@ var blog = {
         postText.innerHTML = post.content;
         postContainer.appendChild(postText);
 
+        
+
+
         this.containerCard.appendChild(imgE);
         this.containerCard.appendChild(postContainer);
-
-
-
 
 
 
@@ -149,6 +154,14 @@ var blog = {
         let postId = window.location.search.substr(4);
         return postId;
     },
+
+
+
+    segnaData: function() {
+        var dataarticolo = document.getElementsByTagName("time");
+        [0].getAttribute("datetime");
+        return dataarticolo;
+        }
 
 
 
