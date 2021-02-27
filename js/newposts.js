@@ -52,6 +52,7 @@ var blog = {
         let imgE = document.createElement("img");
         imgE.setAttribute("src", post.image);
         imgE.setAttribute("height", "500px")
+        imgE.setAttribute("class", "500px")
 
         let postContainer = document.createElement("div");
         postContainer.setAttribute("class", "card-body");
@@ -62,9 +63,9 @@ var blog = {
         postTitle.innerHTML = post.title;
         postContainer.appendChild(postTitle);
 
-        let postNews=  document.createElement("p");
+        let postNews = document.createElement("p");
         postNews.setAttribute("class", "text-muted");
-        postNews.innerHTML= segnaData();
+        postNews.innerHTML = post.info.date + " / " + post.info.author;
         postContainer.appendChild(postNews);
 
         let hrSeparator = document.createElement("hr");
@@ -78,7 +79,7 @@ var blog = {
         postText.innerHTML = post.content;
         postContainer.appendChild(postText);
 
-        
+
 
 
         this.containerCard.appendChild(imgE);
@@ -157,11 +158,7 @@ var blog = {
 
 
 
-    segnaData: function() {
-        var dataarticolo = document.getElementsByTagName("time");
-        [0].getAttribute("datetime");
-        return dataarticolo;
-        }
+  
 
 
 
