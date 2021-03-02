@@ -37,13 +37,8 @@ body {
 
 
     .w-container-footer {
-        display: flex;
-        flex-basis: 100%;
-        justify-content: space-around;
-        position: absolute;
-        bottom: 0;
-        margin-left: 25%;
-        ;
+        text-align: center;
+        
     }
 
     .back_to_top{
@@ -76,6 +71,12 @@ body {
           #contact{
               display: inline;
           }
+
+          .navbar-collapse{
+            background-color: rgba(24, 24, 24, 0.795);
+            margin-top: 12px;
+            
+          }
     }
 
 .myrow{
@@ -84,4 +85,13 @@ body {
     background-color: #dbd2d2;
     margin: 2%;
 }
+
+
+.bi-envelope:hover{
+fill: rgb(43, 43, 180);
+}
     
+
+.bi-instagram:hover{
+    fill: rgb(179, 74, 165);
+}

@@ -1,7 +1,46 @@
 {
-    "id":"my-first-post",
+    "id":"my-fourth-post",
     "image":"my-image.jpg",
-    "title": "Nemo enim ipsam voluptatem",
-    "info": {"date":"27 Febbraio 2021", "author":"Antonietta Brenga"},
-    "content": "Nemo enim ipsam voluptatem, quia voluptas sit, aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos, qui ratione voluptatem sequi nesciunt, neque porro quisquam est, qui dolorem ipsum, quia dolor sit, amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt, ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrumexercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit, qui in ea voluptate velit esse, quam nihil molestiae consequatur, vel illum, qui dolorem eum fugiat, quo voluptas nulla pariatur? At vero eos et accusamus et iusto odio dignissimos ducimus, qui blanditiis praesentium voluptatum deleniti atque corrupti, quos dolores et quas molestias excepturi sint, obcaecaticupiditate non provident, similique sunt in culpa, qui officia deserunt mollitia animi, id est laborum et dolorum fuga."
+    "title": "Come ho creato questo blog.",
+    "info": {
+        "date":"27 Febbraio 2021", 
+        "author":"Antonietta Brenga"
+    },
+    "content": [
+
+        {
+            "type": "text",
+            "content": "Di certo penso sia doveroso battezzare questo blog con un primissimo articolo che specifica come ho iniziato e cosa ho dovuto apprendere per terminarlo.<br>Come ho sempre detto, lo scopo principale è quello di imparare e poi condividere con tutti le nozioni apprese, e perchè no, essere corretta.<br>  Pronti? Bene, iniziamo!!!",
+            "class": "my-class"
+        },
+
+        {
+            "type": "heading",
+             "content": "da dove ho iniziato?",
+             "class": "my-h2"
+        
+     },
+     {
+        "type": "text",
+        "content": "Prima di tutto voglio precisare che ho seguito delle lezioni su Udemy, che per chi non lo conoscesse, è un sito dove chiunque abbia il desiderio di imparare un qualcosa (qualsiasi cosa) può farlo, o perchè no, fare dei corsi per insegnare agli altri...<br> Io personalmente ho seguito le lezioni di Simona Tocci per le basi di HTML e CSS e JQuery (iniziali) e quelle di Gianluca Scocozza che invece mi ha dato delle basi di Javascript.<br> Ho seguito ovviamente anche altri corsi ma decisamente questi due mi hanno aiutato tantissimo e nel mio piccolo mi sento di consigliarli vivamente, soprattutto  a chi come me parte da un livello più basso del livello zero.<br><br>Ovviamente i corsi non bastano, c'è bisogno di tanto approfondimento, di leggere i manuali ufficiali e tanto, tantissimo esercizio, non solo pratico, ma anche nell'allenare il pensiero logico necessario per organizzare tutto il lavoro (cosa in cui ho trovato abbastanza difficoltà).",
+        "class": "my-class"
+    },
+    {
+        "type": "heading",
+         "content": "Il mio progetto.",
+         "class": "my-h2"
+    
+ },
+
+
+ {
+    "type": "text",
+    "content": "Per questo progetto, in particolare ho usato HTML, CSS con l'uso di Bootsrap e ovviamente Javascript.<br> Come si  può notare ho preferito mantenere una semplicità nella posizionamento degli elementi con una pagina iniziale presa come ho detto prima da Bootstrap, una barra e un Jumbotron semplicissimo, e delle immagini prese da un sito che fornisce immagini bellissime senza copirigt, il sito in particolare è www.pexels.com.<br>Vorrei dilungarmi anche un'attimo sull'importanza della scelta delle immagini, in quanto ho appreso da un'esperienza indiretta l'importanza di usare un'immagine libera da copyright.<br>...Tenete presente inoltre che per poter esigere un risarcimento, la richiesta deve prima essere iviata tramite UN PRIMO AVVERTIMENTO dove si può scegliere di togliere la foto seza pagare assolutamente nulla, se poi viene ignorato,viene inviata una raccomandata, se la richiesta avviene in altri modi, probabilmente è una truffa o come si dice 'ce stanno a provà!' consultate comunque un'avvocato che è meglio!.<br>Tornando al blog, di certo la parte più complessa per me è stata rendere dinamica la pagina.<br>In un file Javascript ho creato un'oggetto che ho chiamato blog, dove all'interno ho generato tutto il codice necessario.<br> Ho imparato inoltre che per poter aiutare il ragionaento logico che porta allo sviluppo di un codice funzionante è necessario avere un codice pulito e assegnare alle funzioni un nome pratico che rispecchia esattamente quello che è lo scopo della funzione stessa.<br> Per i post ho creato delle cartelle singole dove all'interno ho creato dei file JSON verso le quali ho fatto delle richieste fetch.<br>Il Dom l'ho manipolato assegnando delle classi di Bootsrap e l'ho poi assegnato al HTML.<br>Prossimamente vorrei approciare in un modo più dinamico ai siti web, magari imparando React, prossimante nuovi aggiornamenti.",
+    "class": "my-class"
+}
+
+
+     
+        
+    ]
 }

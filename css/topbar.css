@@ -4,8 +4,10 @@
    border-bottom: 2px solid #e6e6e665;
    height: 3.2em;
   background-color: rgba(10, 10, 10, 0.144);
-   color:rgb(248, 245, 245);
+   color:rgb(255, 255, 255);
    font-size: 1.2em;
   position: sticky;
+  z-index: 2;
 
 }
+

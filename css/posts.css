@@ -45,8 +45,6 @@ only screen and (                min-resolution: 2dppx)  and (min-width: 320px) 
 }
 
 
-
-
 .my-style-image{
 margin-top: 20px;
 width: 500px;
@@ -67,3 +65,24 @@ text-align: center;
   height: 590px;
 }
 
+
+.myspan{
+padding: 2px;
+  font-size: 13px;
+}
+
+.myCard{
+  margin-top: 20px;
+}
+
+
+.myCardTitle{
+  
+  margin-bottom: -0.2rem;
+
+}
+
+
+.gradient{
+  background: linear-gradient(90deg, rgba(223,219,219,1) 0%, rgba(223,219,219,1) 29%, rgba(0,0,0,0) 100%);
+}

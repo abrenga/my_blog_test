@@ -14,7 +14,7 @@ var blog = {
 
         let image = document.createElement("img");
         image.setAttribute("src", post.image);
-        image.setAttribute('class', 'btn btn-primary');
+        image.setAttribute('class', 'btn ');
         cardDom.appendChild(image);
 
 
@@ -30,19 +30,25 @@ var blog = {
         postDom.setAttribute('id', post.id);
 
         let title = document.createElement('h5');
-        title.setAttribute('class', 'card-title');
+        title.setAttribute('class', 'featurette-heading myCardTitle');
         title.innerHTML = post.title;
         postDom.appendChild(title);
 
+        let info= document.createElement("span");
+        info.setAttribute("class","myspan");
+        info.innerHTML = post.info.date;
+        postDom.appendChild(info);
+
+
         let paragraphPosts = document.createElement("p");
-        paragraphPosts.setAttribute('class', 'card-text');
+        paragraphPosts.setAttribute('class', 'lead myCard');
         paragraphPosts.innerHTML = this.extractPostBodyPreview(post);
         postDom.appendChild(paragraphPosts);
 
         let buttom = document.createElement("a");
         buttom.setAttribute('class', 'btn btn-primary');
         buttom.setAttribute('href', 'singolPost.html?id=' + post.id);
-        buttom.innerHTML = "leggi i più"
+        buttom.innerHTML = "Leggi di più"
         postDom.appendChild(buttom);
         return postDom;
     },
@@ -52,7 +58,7 @@ var blog = {
         let imgE = document.createElement("img");
         imgE.setAttribute("src", post.image);
         imgE.setAttribute("height", "500px")
-        imgE.setAttribute("class", "500px")
+        
 
         let postContainer = document.createElement("div");
         postContainer.setAttribute("class", "card-body");
@@ -64,7 +70,7 @@ var blog = {
         postContainer.appendChild(postTitle);
 
         let postNews = document.createElement("p");
-        postNews.setAttribute("class", "text-muted");
+        postNews.setAttribute("class", "text-mutedTwo");
         postNews.innerHTML = post.info.date + " / " + post.info.author;
         postContainer.appendChild(postNews);
 
@@ -75,7 +81,7 @@ var blog = {
 
 
         let postText = document.createElement("p");
-        postText.setAttribute("class", " lead my-content card-text");
+        postText.setAttribute("class", " my-content card-text");
         postText.innerHTML = post.content;
         postContainer.appendChild(postText);
 
@@ -92,6 +98,92 @@ var blog = {
     },
 
 
+    createAdvancedSinglePost: function (post) {
+
+        let mainImage = document.createElement("img");
+        mainImage.setAttribute("src", post.image);
+        mainImage.setAttribute("height", "500px")
+        
+
+        let postContainer = document.createElement("div");
+        postContainer.setAttribute("class", "card-body");
+
+
+        let postTitle = document.createElement("h1");
+        postTitle.setAttribute("class", "my-title card-title");
+        postTitle.innerHTML = post.title;
+        postContainer.appendChild(postTitle);
+
+        let postNews = document.createElement("p");
+        postNews.setAttribute("class", "text-mutedTwo");
+        postNews.innerHTML = post.info.date + " / " + post.info.author;
+        postContainer.appendChild(postNews);
+
+        let hrSeparator = document.createElement("hr");
+        hrSeparator.setAttribute("class", "featurette divider myh3 myz");
+        postContainer.appendChild(hrSeparator);
+
+
+
+        let contentContainer = document.createElement("div");
+        contentContainer.setAttribute("class", " my-content card-text");
+        postContainer.appendChild(contentContainer);
+
+        this.renderPostContent(contentContainer, post);
+
+
+        this.containerCard.appendChild(mainImage);
+        this.containerCard.appendChild(postContainer);
+
+
+
+        return postContainer, mainImage;
+    },
+
+    renderPostContent: function (container, post) {
+        post.content.forEach((entry) => {
+
+            switch(entry.type) {
+                case "text":
+                    const textNode = this.renderTextContent(post, entry);
+                    container.appendChild(textNode);
+                    break;
+                case "image":
+                    const imageNode = this.renderImageContent(post, entry);
+                    container.appendChild(imageNode);
+                    break;
+                case "heading":
+                    const headingNode = this.renderHeadingContent(post, entry);
+                    container.appendChild(headingNode);
+                    break;
+            }
+
+        });
+    },
+
+    renderTextContent: function (post, content) {
+        let node = document.createElement("p");
+        node.setAttribute("class", content.class);
+        node.innerHTML = content.content;
+
+        return node;
+    },
+
+    renderImageContent: function (post, content) {
+        let node = document.createElement("img");
+        node.setAttribute("class", content.class + " postImage");
+        node.src = "posts/" + post.id + "/" + content.content;
+
+        return node;
+    },
+
+    renderHeadingContent: function (post, content) {
+        let node = document.createElement("h2");
+        node.setAttribute("class", content.class);
+        node.innerHTML = content.content;
+
+        return node;
+    },
 
 
     prendiPosts: function (posts) {
@@ -104,8 +196,8 @@ var blog = {
     },
 
     extractPostBodyPreview: function (post) {
-        let str = post.content;
-        let newStr = str.substring(0, 150);
+        let str = post.content[0].content;
+        let newStr= str.substring(0,150);
         return newStr + "...";
     },
 
@@ -148,7 +240,7 @@ var blog = {
     initSinglePost: async function () {
         let postId = this.getPostIdParameter();
         let post = await this.getPost(postId);
-        this.createSinglePost(post);
+        this.createAdvancedSinglePost(post);
     },
 
     getPostIdParameter: function () {

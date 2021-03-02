@@ -1,12 +1,42 @@
 .my-content{
-    font-family: 'Roboto Slab', serif;
+    font-family: 'Nunito', sans-serif;
+    font-size: 20px;
+    margin: 0 45px 0 45px;
+}
+
+
+.text-mutedTwo{
+    margin-left: 47px;
 }
 
 
 
-.my-title{
-    font-family: 'Roboto Slab', serif;
-
+.card-title{
+    margin: 45px 0 0 45px;
 }
+
+.myrow{
+    --bs-gutter-x: -0.5rem;
+    
+     
+}
+
+.postImage {
+    max-width: 100%;
+}
+
+
+
+.my-h2{
+    margin-top: 50px;
+    color: black;
+}
+
+
+.myh3 {
+    margin: 3.5rem;
+}
+
+
 
 
