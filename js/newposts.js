@@ -34,8 +34,8 @@ var blog = {
         title.innerHTML = post.title;
         postDom.appendChild(title);
 
-        let info= document.createElement("span");
-        info.setAttribute("class","myspan");
+        let info = document.createElement("span");
+        info.setAttribute("class", "myspan");
         info.innerHTML = post.info.date;
         postDom.appendChild(info);
 
@@ -58,7 +58,7 @@ var blog = {
         let imgE = document.createElement("img");
         imgE.setAttribute("src", post.image);
         imgE.setAttribute("height", "500px")
-        
+
 
         let postContainer = document.createElement("div");
         postContainer.setAttribute("class", "card-body");
@@ -103,7 +103,7 @@ var blog = {
         let mainImage = document.createElement("img");
         mainImage.setAttribute("src", post.image);
         mainImage.setAttribute("height", "500px")
-        
+
 
         let postContainer = document.createElement("div");
         postContainer.setAttribute("class", "card-body");
@@ -118,6 +118,8 @@ var blog = {
         postNews.setAttribute("class", "text-mutedTwo");
         postNews.innerHTML = post.info.date + " / " + post.info.author;
         postContainer.appendChild(postNews);
+
+
 
         let hrSeparator = document.createElement("hr");
         hrSeparator.setAttribute("class", "featurette divider myh3 myz");
@@ -143,7 +145,7 @@ var blog = {
     renderPostContent: function (container, post) {
         post.content.forEach((entry) => {
 
-            switch(entry.type) {
+            switch (entry.type) {
                 case "text":
                     const textNode = this.renderTextContent(post, entry);
                     container.appendChild(textNode);
@@ -151,10 +153,15 @@ var blog = {
                 case "image":
                     const imageNode = this.renderImageContent(post, entry);
                     container.appendChild(imageNode);
+                    console.log(entry);
                     break;
                 case "heading":
                     const headingNode = this.renderHeadingContent(post, entry);
                     container.appendChild(headingNode);
+                    break;
+                case "code":
+                    const codeNode = this.renderCodeContent(post, entry);
+                    container.appendChild(codeNode);
                     break;
             }
 
@@ -186,6 +193,24 @@ var blog = {
     },
 
 
+    renderCodeContent: function (post, content) {
+        let pre = document.createElement("pre");
+
+        this.getSnippet(post.id, content.content).then((snippet) => {
+            let node = document.createElement("code");
+            node.setAttribute("class", content.class);
+            node.innerHTML = snippet;
+            pre.appendChild(node);
+
+            hljs.highlightBlock(pre);
+        });
+
+        return pre;
+    },
+
+
+
+
     prendiPosts: function (posts) {
 
         posts.forEach(post => {
@@ -197,13 +222,14 @@ var blog = {
 
     extractPostBodyPreview: function (post) {
         let str = post.content[0].content;
-        let newStr= str.substring(0,150);
+        let newStr = str.substring(0, 100);
         return newStr + "...";
     },
 
     getPostsIndex: async function () {
         let response = await fetch('posts/index.json');
         let posts = await response.json();
+
 
         return posts;
     },
@@ -215,6 +241,15 @@ var blog = {
         post.image = "posts/" + slug + "/" + post.image;
 
         return post;
+    },
+
+    getSnippet: async function (slug, snippet) {
+        let response = await fetch('posts/' + slug + '/' + snippet);
+        let text = await response.text();
+
+
+        return text;
+
     },
 
     getLatestPosts: async function (slugs) {
@@ -230,6 +265,7 @@ var blog = {
 
     init: async function () {
         const postsIndex = await this.getPostsIndex();
+        postsIndex.reverse();
 
         const selectedSlugs = postsIndex.slice(-4);
         const posts = await this.getLatestPosts(selectedSlugs);
@@ -250,7 +286,7 @@ var blog = {
 
 
 
-  
+
 
 
 
