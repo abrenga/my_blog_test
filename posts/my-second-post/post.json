@@ -9,7 +9,7 @@
     "content": [
         {
             "type": "text",
-            "content": "Beh eccoci qua!<br> Inizio quest'articolo riconfermando quanto già detto, le difficoltà che continuo a riscontrare sono nella costruzione di un ragionamento logico, quindi per riuscire ad abbattere questo muro gigantesco, non mi resta che esercitarmi, esercitarmi, esercitarmi...<br> Ecco allora perchè ho deciso di cimentarmi nel famoso giochino tic-tac-toe anche detto più comunemente 'tris'.<br>Chi non ha mai giocato a questo gioco?<br>Ricordo che in classe era uno dei giochi più in voga da fare con il compagno di banco insieme all'impiccato e alla battaglia navale.<br>Ma come passare da:<br>'traccio due righe e due line e iniziamo!!'<br>a: <br>'ok! inizializza un'oggetto e sviluppaci dentro tutto il ragionamento che rende possibile il gioco???' <br>I consigli che ho seguito sono :<br><ol><li>'Come è fatto? cosa deve avere per funzionare?<br>Scrivi il progetto, anche su un foglio, disegnalo se è necessario,questo ti sarà utile per tenere il focus su quello che devi fare, devi poi analizzare ogni elemento singolarmente'.</li><li> il ragionamento va sviluppato javascript, senza pensare al'HTML e al css questi andranno inseriti successivamente.</li><ol>",
+            "content": "Bene eccoci!!<br> Inizio quest'articolo riconfermando quanto già detto, le difficoltà che continuo a riscontrare sono nella costruzione di un ragionamento logico, quindi per riuscire ad abbattere questo muro gigantesco, non mi resta che esercitarmi, esercitarmi, esercitarmi...<br> Ho deciso quindi, di cimentarmi nel  gioco <strong>'tic-tac-toe'</strong> anche detto più comunemente 'tris'.<br>Chi non ha mai giocato a questo gioco?<br>Ricordo che in classe era uno dei giochi più in voga da fare con il compagno di banco insieme all'impiccato e a Nomi Cose e Città.<br>Ma come passare da:<br>'traccio due righe e due line e iniziamo!!'<br>a: <br>'ok! sviluppa tutto il ragionamento che rende possibile il gioco???' <br>I consigli che ho seguito sono :<br><ol><li>'Come è fatto? cosa deve avere per funzionare?<br>Scrivi il progetto, anche su un foglio( se necessario), questo ti sarà utile per tenere il focus su quello che devi fare, analizza poi, ogni elemento singolarmente'.</li><li> il ragionamento va sviluppato javascript, senza pensare <strong>al'HTML e al CSS </strong>, questi andranno inseriti successivamente.</li><ol>",
             "class": "my-class"
         },
         {
@@ -29,7 +29,7 @@
         },
         {
             "type": "text",
-            "content": "<ul><li>il gioco è formato da un quadrato con 3 celle in orizzontale e 3 in vericale.</li><li>Abbiamo 2 giocatori: giocatore uno, più comunemente identificato con :'X' e giocatore due, identificato invece con: 'O', scelgo convenzionalemente che tra i due ad inizia è il giocatore uno.</li>Vince chi tra i due giocatori disegna una successione di simboli uguali in orizzontale in veritcle o in obliquo.<br>N.B ogni giocatore ha la possibiltà di cliccare su una casella una sola volta e solo se questa è libera.<br>"
+            "content": "<ul><li>il gioco è formato da un quadrato con 3 celle in orizzontale e 3 in vericale.</li><li>Abbiamo 2 giocatori: giocatore uno, più comunemente identificato con: <strong>'X' </strong> e giocatore due, identificato invece con: <strong>'O'</strong>, scelgo convenzionalemente che tra i due, inizia il giocatore uno.</li>Vince chi tra i due giocatori disegna una successione di simboli uguali in orizzontale in veritcle o in obliquo.<br><strong>N.B</strong> ogni giocatore ha la possibiltà di cliccare su una casella sola e solo se questa è libera.<br>"
         },
         {
             "type": "heading",
@@ -38,7 +38,7 @@
         },
         {
             "type": "text",
-            "content": "<ul><li>il quadrato è formato da singole celle, dichiariamo quindi una funzione che si occupa di 'crearle', passando come parametri delle coordinate, che serviranno ad identificare poi l'esatta posizione della cella all'interno del quadrato.</li>",
+            "content": "<ul><li>Il quadrato è formato da singole celle, dichiariamo quindi, una funzione che si occupa di <strong>'crearle'</strong>, passando come parametri delle coordinate, che serviranno ad identificare poi l'esatta posizione della cella all'interno del quadrato.<b<> Ho pensato di usare come rappresentazione della cella un'oggetto chiamato <strong>'box'</strong>.<br></li>",
             "class": "my-class"
         },
         {
@@ -48,7 +48,7 @@
         },
         {
             "type": "text",
-            "content": "<li>Dichiariamo in seguito un'altra funzione che si occuperà di raggruppare le celle per formare una griglia, inserendo come parametri le  grandezze dei due lati (parametri necessari per stabilire quante celle andranno a comporre la griglia stessa).</li>N.B una griglia non è altro che un'array di celle, è bene dunque posizionare ogni singola cella all'interno di un'array assegnando a questa una posizione o coordinata(x,y).<br>Per poter permettere alle celle di posizionarsi correttamente bisonerà tener conto di ben due grandezze, va formato quindi un doppio 'for'.<br>Il  primo che  andrà da x = 0 per tutta la lunghezza orizzontale e un'altro, all'interno del primo, che per ogni x avrà tutte le y per tutta la lunghezza verticale.",
+            "content": "<li>Dichiariamo poi un'altra funzione che si occuperà di raggruppare le celle per formare una griglia, inserendo, come parametri le  grandezze dei due lati (parametri necessari per stabilire quante celle andranno a comporre la griglia stessa).</li> <strong>N.B </strong>una griglia non è altro che un insieme di celle, è bene dunque posizionare ogni singola cella all'interno di un'array assegnando a questa una posizione o coordinata<strong>(x,y)</strong>.<br>Per poter permettere alle celle di posizionarsi correttamente bisonerà tener conto di ben due grandezze, va formato quindi un doppio <strong>'for'</strong>.<br>Il  primo che  andrà da <strong>'X = 0' </strong> per tutta la lunghezza orizzontale e un'altro, all'interno del primo, che avrà tutte le <strong>'Y' </strong>per tutta la lunghezza verticale.",
             "class": "my-class"
         },
         {
@@ -58,7 +58,7 @@
         },
         {
             "type": "text",
-            "content": "Per procedere con il progetto sarà necessario a questo punto selezionare la singola cella interessata.<br>Per ogni elemento dell'Array dunque, specifichiamo di prendere esattamente le coordinate che ci interessano e ritorniamo la cella stessa.<br>All'interno di questa poi andrà invocata o la funzione che si occupa di inserire la X o la O a seconda del turno in cui ci troviamo.",
+            "content": "Bisognerà quindi, selezionare la singola cella interessata.<br>Per ogni elemento dell'Array dunque, specifichiamo di prendere esattamente le coordinate che ci interessano e ritorniamo la cella stessa.<br>All'interno di questa, poi, andrà invocata la funzione che si occupa di inserire la <strong>'X'</strong> o la <strong>'O'</strong> a seconda del turno in cui ci troviamo.",
             "class": "my-class"
         },
         {
@@ -68,21 +68,49 @@
         },
         {
             "type": "heading",
-            "content": "Inserisci la X inserisci la O.",
+            "content": "Inserisci la 'X' inserisci la 'O'.",
             "class": "my-h5"
         },
         {
             "type": "text",
-            "content": "Come possiamo fare in modo che cliccando su una cella compaia la 'X' o la 'O'?<br>Teniamo presente che se i giocatori sono due, come in questo caso, possiamo tranquillamente usare un booleano per specificare una condizione mutata, fissiamo quindi una variabile all'esterno della funzione 'let toccaAllaX = true'.<br>Ogni volta che andiamo ad inserire la x all'interno della cella la variabile passerà a false e cosi via.",
+            "content": "Come possiamo fare in modo che cliccando su una cella compaia la <strong>'X' </strong> o la <strong>'O'</strong>?<br>Teniamo presente che se i giocatori sono due, come in questo caso, possiamo tranquillamente usare un booleano per specificare che una condizione è mutata, fissiamo quindi, una variabile all'esterno della funzione <strong>'let toccaAllaX = true'</strong>.<br>Ogni volta che andiamo ad inserire la <strong>'X' </strong> all'interno della cella la variabile passerà a <strong>'false'</strong> e cosi via.",
             "class": "my-class"
         },
-
         {
             "type": "code",
             "content": "esempio4.js",
             "class": "my-code"
-        }
+        },
+        {
+            "type": "heading",
+            "content": "Non ci resta che scegliere il vincitore",
+            "class": "my-h5"
+        },
+        {
+            "type": "text",
+            "content": "Una volta generato l'evento sulla cella interessata, non ci resta che scegliere il vincitore.<br>Sappiamo che vince, chi è riuscito a formare una fila di 3 simboli uguali in verticale, in orizzontale o in diagonale.<br> Le funzioni sono molto simili tra loro, dovremo infatti, considerare ancora l'asse delle <strong>'X'</strong> e l'asse delle <strong>'Y'</strong>.<br>^<br>2 |<br>1 |<br>0 |<br>  _ _ _ _ _ > X<br>0 1 2 <br> Come per la creazione della singola cella, anche qui è necessario un doppio <strong>'for'</strong> per riuscire a scorrere entrambe le grandezze, ovviamente la scelta di ascorrere prima la <strong>'X'</strong> o la <strong>'Y'</strong> dipende da quale funzione stiamo prendendo in considerazione.<br> Per determinare il vincitore in orizzontale bisognerà scorrere per ogni <strong>'Y'</strong> tutte le <strong>'X'</strong> e al contrario, per il vincitore in verticale.<br> Discorso leggermente diverso per la vincita in obliquo dove la crescita di <strong>'X'</strong>e di <strong>'Y' </strong>deve essere uguale, ad ogni crescita di <strong>'X'</strong>cresce in egual misura <strong>'Y'</strong><br>Ecco l'esempio:<br> ",
+            "class": "my-class"
+        },
+        {
+            "type": "code",
+            "content": "esempio5.js",
+            "class": "my-code"
+        },
+        {
+            "type": "text",
+            "content": "Teniamo presente che le vincite in obliquo sono due.<br> una dove <strong>'X'</strong> e <strong>'Y' </strong> aumentano e l'altra dove <strong>'Y'</strong> decresce e la <strong>'X'</strong> aumenta:<br> ",
+            "class": "my-class"
+        },
+        {
+            "type": "image",
+            "content": "nuvo.jpeg",
+            "class": "my-imageClassInText"
+        },
 
-        
+        {
+            "type": "text",
+            "content": "Bisognerà quindi avere un'altra funzione che raccoglierà la vincita obliqua opposta.<br> Bene, Spero che questo articolo vi sia piacituo, e che vi sia stato utile, ci aggiornamo per altrti articoli.<br> per chi volesse leggere tutto il codice, in allegato il link:  ",
+            "class": "my-class"
+        }
     ]
 }
